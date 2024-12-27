@@ -1,0 +1,92 @@
+{
+  "name": "sweetalert2",
+  "version": "11.5.2",
+  "repository": "sweetalert2/sweetalert2",
+  "homepage": "https://sweetalert2.github.io/",
+  "description": "A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes, supported fork of sweetalert",
+  "main": "dist/sweetalert2.all.js",
+  "browser": "dist/sweetalert2.all.js",
+  "module": "dist/sweetalert2.all.js",
+  "types": "sweetalert2.d.ts",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.1.0",
+    "@sweetalert2/eslint-config": "^1.1.20",
+    "@sweetalert2/stylelint-config": "^3.0.1",
+    "browser-sync": "^3.0.3",
+    "cypress": "^13.17.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-cypress": "^4.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-no-unsanitized": "^4.1.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-css2js": "^1.2.1",
+    "gulp-if": "^3.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.7.1",
+    "merge2": "^1.4.1",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.4.2",
+    "replace-in-file": "^8.3.0",
+    "rollup": "^1.32.1",
+    "sass": "^1.83.0",
+    "stylelint": "^16.12.0",
+    "typescript": "^5.7.2"
+  },
+  "files": [
+    "dist",
+    "src",
+    "sweetalert2.d.ts"
+  ],
+  "author": "Limon Monte <limon.monte@gmail.com> (https://limonte.github.io)",
+  "contributors": [
+    "Giuseppe Verni (https://github.com/gverni)",
+    "Matthew Francis Brunetti <zenflow87@gmail.com> (https://github.com/zenflow)",
+    "Morgan Touverey-Quilling <mtouverey@alembic-dev.com> (https://github.com/toverux)",
+    "Sam Turrell <sam@samturrell.co.uk> (https://github.com/samturrell)",
+    "Joseph Schultz (https://github.com/acupofjose)",
+    "Johan Fagerberg (https://github.com/birjolaxew)"
+  ],
+  "keywords": [
+    "sweetalert",
+    "sweetalert2",
+    "alert",
+    "modal",
+    "popup",
+    "prompt",
+    "confirm",
+    "toast",
+    "accessible"
+  ],
+  "scripts": {
+    "start": "gulp develop --continue-on-error --skip-minification --skip-standalone",
+    "lint": "stylelint src/**/*.scss && eslint src cypress *.js *.ts && prettier --check src/**/*.js cypress/**/*.js *.js",
+    "build": "gulp build",
+    "test": "cypress run --headless",
+    "check-types": "tsc --noEmit -p jsconfig.json",
+    "cypress:open": "cypress open"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://sweetalert2.github.io/#donations"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "trailingComma": "es5"
+  },
+  "bugs": "https://github.com/sweetalert2/sweetalert2/issues",
+  "license": "MIT",
+  "dependencies": {
+    "fancy-log": "^2.0.0",
+    "gulp-better-rollup": "^4.0.1"
+  }
+}
